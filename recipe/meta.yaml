@@ -1,32 +1,34 @@
 {% set name = "whitenoise" %}
 {% set version = "5.2.0" %}
-{% set sha256 = "05ce0be39ad85740a78750c86a93485c40f08ad8c62a6006de0233765996e5c7" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/whitenoise-{{ version }}.tar.gz
+  sha256: 05ce0be39ad85740a78750c86a93485c40f08ad8c62a6006de0233765996e5c7
 
 build:
-  noarch: python
   number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
+    - python >=3.5,<4.0
     - pip
-    - python
-    - setuptools
   run:
-    - python
+    - python >=3.5,<4.0
 
 test:
   imports:
     - whitenoise
+    - whitenoise.runserver_nostatic
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/evansd/whitenoise
