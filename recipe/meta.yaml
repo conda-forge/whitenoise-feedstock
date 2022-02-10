@@ -1,5 +1,5 @@
 {% set name = "whitenoise" %}
-{% set version = "5.3.0" %}
+{% set version = "6.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/whitenoise-{{ version }}.tar.gz
-  sha256: d234b871b52271ae7ed6d9da47ffe857c76568f11dd30e28e18c5869dbd11e12
+  sha256: 08c42bc535f9777eea1a599289d9433f081921f97887eaf6f559446b2a080374
 
 build:
   number: 0
