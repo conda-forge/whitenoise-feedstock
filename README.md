@@ -1,11 +1,11 @@
-About whitenoise
-================
+About whitenoise-feedstock
+==========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/whitenoise-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/evansd/whitenoise
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/whitenoise-feedstock/blob/main/LICENSE.txt)
 
 Summary: Radically simplified static file serving for Python web apps
 
